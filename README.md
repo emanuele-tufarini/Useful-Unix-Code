@@ -1,4 +1,4 @@
-Per velocizzare VirtualBox su Macbook Pro 2019 (soffre di rallentamenti e lag) abilitare la modalità bassa risoluzione
+Per velocizzare VirtualBox su Macbook Pro 2019 (soffre di rallentamenti) abilitare la modalità bassa risoluzione
 
 ![alt text](https://raw.githubusercontent.com/emanuele-tufarini/appunti-virtual-machines/main/VelocizzareVirtualBoxMacPro2019.jpeg?token=ANNXHIAV6NXDEFEWJD74CV3BRBGWM)
 
