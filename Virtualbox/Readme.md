@@ -1,8 +1,8 @@
-## VirtualBox Command Line utilizza vboxmanage
+## Installare le extension pack
 `sudo vboxmanage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-XXX.vbox-extpack`
-## Mostrare la lista di tutte le macchine virtuali
+## Mostrare la lista di VM virtuali
 `vboxmanage list vms`
-## Mostrare la lista delle macchine virtuali avviate
+## Mostrare la lista delle VM avviate
 `vboxmanage list runningvms`
 ## Mostrare tutti gli ostype
 `vboxmanage list ostypes`
@@ -88,6 +88,8 @@ Alcuni comandi disponibili sono pause, resume, reset, poweroff e savestate
 `vboxmanage import image.ova`
 ## Per effettuare uno streaming di Virtualbox devo installare Remmina (protocollo RDP)
 ## Abilitare protocollo RDP (su una determinata porta)
+Per effettuare uno streaming di Virtualbox devo installare Remmina (protocollo RDP)
+
 `vboxmanage modifyvm $MACHINENAME --vrde on`
 
 `vboxmanage modifyvm $MACHINENAME --vrdemulticon on --vrdeport 10001`
