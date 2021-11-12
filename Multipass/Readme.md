@@ -19,7 +19,7 @@ Montare una cartella contenente i file nella VM
 
 Visualizzare il percorso di mount della cartella
 
-`multipass info MultipassGromacs`
+`multipass info MultipassUbuntu`
 
 Accedere alla Shell della VM
 
