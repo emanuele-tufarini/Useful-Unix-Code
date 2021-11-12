@@ -11,11 +11,11 @@ Una volta installato multipass avviare a seconda dell'OS utilizzato:
 
 Creare e lanciare una VM (basata sull'ultima versione di Ubuntu Server LTS)
 
-`multipass launch --name MultipassGromacs`
+`multipass launch --name MultipassUbuntu`
 
 Montare una cartella contenente i file nella VM
 
-`multipass mount /path/myFolder MultipassGromacs`
+`multipass mount /path/myFolder MultipassUbuntu`
 
 Visualizzare il percorso di mount della cartella
 
