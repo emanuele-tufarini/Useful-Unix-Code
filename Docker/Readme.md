@@ -1,15 +1,3 @@
-# Table of contents
-
-1. [Utilizzare il comando SCP](#Utilizzare il comando SCP)
-2. [Installare docker su Ubuntu](#Installare docker su Ubuntu)
-3. [Installare docker su Fedora](#Installare docker su Fedora)
-4. [Aggiungere $USER al gruppo docker](#Aggiungere $USER al gruppo docker)
-5. [Comandi utili per i container docker](#Comandi utili per i container docker)
-6. [Comandi per il backup dei container docker](#Comandi per il backup dei container docker)
-7. [Comandi per mostrare i log dei container docker](#Comandi per mostrare i log dei container docker)
-8. [Ricreare un servizio docker compose](#Ricreare un servizio docker compose)
-8. [Eseguire un backup completo del database mysql dentro a un container docker](#Eseguire un backup completo del database mysql dentro a un container docker)
-
 ## Utilizzare il comando SCP
 
 Copiare una cartella in remoto in una macchina locale
