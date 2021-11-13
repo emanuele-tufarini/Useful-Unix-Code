@@ -11,43 +11,44 @@ Una volta installato multipass avviare a seconda dell'OS utilizzato:
 
 Creare e lanciare una VM (basata sull'ultima versione di Ubuntu Server LTS)
 
-`multipass launch --name MultipassUbuntu`
+	multipass launch --name MultipassVM
 
 Montare una cartella contenente i file nella VM
 
-`multipass mount /path/myFolder MultipassUbuntu`
+	multipass mount /path/myFolder MultipassVM
 
 Visualizzare il percorso di mount della cartella
 
-`multipass info MultipassUbuntu`
+	multipass info MultipassVM
 
 Accedere alla Shell della VM
 
-`multipass shell MultipassUbuntu`
+	multipass shell MultipassVM
 
 ## Aggiornare la VM
+
 Aggiornare la VM
 
-`sudo apt update && sudo apt upgrade`
+	sudo apt update && sudo apt upgrade
 
 ## Rimuovere la VM
 
 Rimuovere la VM
 
-`multipass delete MultipassUbuntu`
+	multipass delete MultipassVM
 
 Rimuovere definitivamente la VM (rimuoverà tutte le VM in delete)
 
-`multipass purge`
+	multipass purge
 
 Controllare la lista delle VM
 
-`multipass list`
+	multipass list
 
 Stoppare la VM
 
-`multipass stop MultipassUbuntu`
+	multipass stop MultipassVM
 
 Avviare la VM
 
-`multipass start MultipassUbuntu`
+	multipass start MultipassVM
