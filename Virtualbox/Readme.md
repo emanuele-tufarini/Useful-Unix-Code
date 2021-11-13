@@ -1,10 +1,10 @@
 ## Creare una VM (headless)
 
-Visualizzare gli ostype (i sistemi operativi che Virtualbox è in grado di emulare)
+Visualizzare gli ostype (i sistemi operativi che [Virtualbox](https://www.virtualbox.org/wiki/Downloads "Virtualbox") è in grado di emulare)
 
 	vboxmanage list ostypes
 
-Virtualbox si compone di un'interfaccia grafica GUI e di un'interfaccia headless che può essere controllata tramite il terminale di Linux. Questa modalità permette di creare ed accedere alle VM senza accedere all'interfaccia GUI. Inoltre tramite il protocollo RDP è possibile eseguire lo streaming dell'interfaccia GUI di Virtualbox da un server headless a una macchina host in modo da poter configurare le VM con la componente grafica del programma (consiglio di utilizzare Remmina per accedere alla porta RDP configurata)
+Virtualbox si compone di un'interfaccia grafica GUI e di un'interfaccia headless che può essere controllata tramite il terminale di Linux. Questa modalità permette di creare ed accedere alle VM senza accedere all'interfaccia GUI. Inoltre tramite il protocollo RDP è possibile eseguire lo streaming dell'interfaccia GUI di Virtualbox da un server headless a una macchina host in modo da poter configurare le VM con la componente grafica del programma (consiglio di utilizzare [Remmina](https://remmina.org/ "Remmina") per accedere alla porta RDP configurata)
 
 	vboxmanage createvm --name <VMname> --ostype "Linux_64" --register --basefolder $PWD
 
