@@ -2,11 +2,11 @@
 
 Copiare una cartella in remoto in una macchina locale
 
-	scp -r user@yourServerIp:/path/to/foo /home/user/Desktop/
+	scp -r user@yourServerIp:/path/to/remote /home/to/local/
 
 Copiare una cartella locale in una macchina remota
 
-	scp -r /path/from/local username@yourServerIp:/path/to/remote
+	scp -r /path/to/local username@yourServerIp:/path/to/remote
 
 ## Installare docker su Ubuntu
 
@@ -90,11 +90,11 @@ Entrare in un container docker accedendo alla shell (il container deve essere in
 
 Copiare un file in un container
 
-	docker cp example.extension [container-id]:/work
+	docker cp myFile [container-id]:/work
 
 Copiare un file del container nella macchina host
 
-	docker cp [container-id]:/file/path/within/container /host/path/target
+	docker cp [container-id]:/path/to/container/myFile /path/to/local
 
 ## Comandi per il backup dei container Docker
 
