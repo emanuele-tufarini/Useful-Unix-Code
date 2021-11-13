@@ -1,13 +1,12 @@
 ## Installare Multipass
 Installare [multipass](http://romanysoft.ghttps://multipass.run/ithub.io/MarkdownD/ "Multipass") per creare VM istantanee (disponibile per Linux, MacOS e Windows) tramite il file di installazione fornito sul sito.
 In alternativa si può utilizzare VirtualBox, un container Docker o altre tipologie di virtualizzazione o containerizzazione.
-Gromacs è disponibile inoltre per ambienti Unix.
 
 ## Creare una VM con multipass per utilizzare i software Linux
 Una volta installato multipass avviare a seconda dell'OS utilizzato:
 - il terminale di Linux
 - il terminale di MacOS
-- La powershell di Windows
+- la powershell di Windows
 
 Creare e lanciare una VM (basata sull'ultima versione di Ubuntu Server LTS)
 
