@@ -4,7 +4,7 @@ Visualizzare gli ostype (i sistemi operativi che Virtualbox è in grado di emula
 
 	vboxmanage list ostypes
 
-Virtualbox si compone di un'interfaccia grafica GUI e di un'interfaccia headless che può essere controllata tramite il terminale di Linux. Questa modalità permette di creare ed accedere alle VM senza accedere all'interfaccia GUI. Inoltre tramite il protocollo RDP è possibile streammare l'interfaccia GUI di Virtualbox da un server headless a una macchina host in modo da poter configurare le VM con la componente grafica del programma (consiglio di utilizzare Remmina per accedere alla porta RDP configurata)
+Virtualbox si compone di un'interfaccia grafica GUI e di un'interfaccia headless che può essere controllata tramite il terminale di Linux. Questa modalità permette di creare ed accedere alle VM senza accedere all'interfaccia GUI. Inoltre tramite il protocollo RDP è possibile eseguire lo streaming dell'interfaccia GUI di Virtualbox da un server headless a una macchina host in modo da poter configurare le VM con la componente grafica del programma (consiglio di utilizzare Remmina per accedere alla porta RDP configurata)
 
 	vboxmanage createvm --name <VMname> --ostype "Linux_64" --register --basefolder $PWD
 
