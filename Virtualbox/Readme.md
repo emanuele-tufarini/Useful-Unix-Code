@@ -92,7 +92,7 @@ Mostrare tutte le VM avviate
 
 Clonare una VM
 
-	vboxmanage clonevm <VMname> --name <newVMName> --register
+	vboxmanage clonevm <VMname> --name <newVMname> --register
 
 Creare uno snapshot
 
