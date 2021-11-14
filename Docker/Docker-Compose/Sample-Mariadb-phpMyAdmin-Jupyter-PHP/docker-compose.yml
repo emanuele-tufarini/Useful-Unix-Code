@@ -1,4 +1,4 @@
-# Creare nella directory di docker-compose la cartella <php-script> (con lo script index.php) <sql-script> (con gli script sql) e la cartella <jupyter-notebook> (che conterrà tutti i file del notebook)
+# Creare nella directory di docker-compose la cartella <php-script> (con lo script index.php) <sql-script> (con gli script sql) e la cartella cartella <jupyter-notebook> (che conterrà tutti i file del notebook)
 
 version: '3.1'
 
