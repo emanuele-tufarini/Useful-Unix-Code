@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: <RootPassword>
+      MYSQL_DATABASE: <DBname>
+      MYSQL_USER: <User>
+      MYSQL_PASSWORD: <UserPassword>
+    volumes: 
+        - ./init:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
