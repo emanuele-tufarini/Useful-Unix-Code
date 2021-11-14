@@ -41,6 +41,10 @@ Montare una cartella contenente i file nella VM
 
 	multipass mount /path/myFolder <VMname>
 
+Smontare una cartella contenente i file nella VM
+
+	multipass umount <VMname>:/path/myFolder
+	
 Visualizzare il percorso di mount della cartella
 
 	multipass info <VMname>
