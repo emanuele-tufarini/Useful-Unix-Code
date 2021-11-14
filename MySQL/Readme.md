@@ -2,7 +2,7 @@
 
 Eseguire il login con MySQL
 
-	  mysql -u root -p
+	  mysql -u <User> -p
 
 Eseguire il login con MySQL specificando host e password
 
