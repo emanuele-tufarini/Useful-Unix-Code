@@ -10,7 +10,6 @@ Disattivare HyperV
 
 	bcdedit /set hypervisorlaunchtype off
 
-
 ## Installare Multipass
 Installare [multipass](http://romanysoft.ghttps://multipass.run/ithub.io/MarkdownD/ "Multipass") per creare VM istantanee (disponibile per Linux, MacOS e Windows) tramite il file di installazione fornito sul sito.
 In alternativa si può utilizzare VirtualBox, un container Docker o altre tipologie di virtualizzazione o containerizzazione.
