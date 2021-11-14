@@ -62,7 +62,7 @@ Utilizzare un DB
 
 	USE <DBname>;
   
-Creare una tabella (prima colonna chiave primaria AUTO_INCREMENT)
+Creare una tabella (prima colonna PRIMARY_KEY AUTO_INCREMENT)
 
 	CREATE TABLE <TableName> {
 
