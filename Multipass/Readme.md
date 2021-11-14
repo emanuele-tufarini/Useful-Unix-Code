@@ -56,6 +56,10 @@ Rimuovere la VM
 
 	multipass delete <VMname>
 
+Recuperare la VM
+
+	multipass recover <VMname>
+	
 Rimuovere definitivamente la VM (rimuoverà tutte le VM in delete)
 
 	multipass purge
