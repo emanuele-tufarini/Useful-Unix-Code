@@ -24,6 +24,14 @@ Creare e lanciare una VM (basata sull'ultima versione di Ubuntu Server LTS)
 
 	multipass launch --name <VMname>
 
+Modificare le caratteristiche della VM
+
+	--cpus=CPUS        Number of CPUs to allocate. Minimum: 1, default: 1.
+
+	--size=SIZE        Disk space to allocate. Positive integers, in bytes, or with K, M, G suffix. Minimum: 512M, default: 5G.
+
+	--mem=MEMORY       Amount of memory to allocate. Positive integers, in bytes, or with K, M, G suffix. Minimum: 128M, default: 1G.
+
 Montare una cartella contenente i file nella VM
 
 	multipass mount /path/myFolder <VMname>
