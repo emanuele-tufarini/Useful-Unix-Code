@@ -1,4 +1,4 @@
-## Comandi base MySQL
+## Connettersi al DB con MySQL
 
 Eseguire il login con MySQL
 
@@ -10,7 +10,7 @@ Eseguire il login con MySQL specificando host e password
 
 ## Procedure di backup
 
-Effettuare il backup di un database specifico con MySQL
+Effettuare il backup di un DB specifico con MySQL
 
 	mysqldump -u root -p <DBname> > DB-backup.sql
  
@@ -18,95 +18,95 @@ Effettuare il backup delle tabelle con MySQL
 
 	mysqldump -u root -p <DBname> <Table1> <Table2> > <BackupName>.sql
   
-Effettuare il backup compresso (GZ) di un database specifico con MySQL
+Effettuare il backup compresso (GZ) di un DB specifico con MySQL
 
 	mysqldump -u <User> -p <DBname> | gzip > <BackupName>.sql.gz
 
-Effettuare il backup da un host remoto di un database specifico con MySQL
+Effettuare il backup da un host remoto di un DB specifico con MySQL
 
 	mysqldump -P <Port> -h <ServerIP> -u <User> -p <DBname> > <BackupName>.sql
   
-Effettuare il backup di tutti i database con MySQL
+Effettuare il backup di tutti i DB con MySQL
 
 	mysqldump --all-databases -u <User> -p<Password> > <BackupName>-$(date +%F).sql
   
-Effettuare il backup di un database MySQL in un container Docker
+Effettuare il backup di un DB MySQL in un container Docker
 
 	docker exec <ContainerID> sh -c 'exec mysqldump --all-databases -u<User> -p<Password>' > <BackupName>.sql
 
 ## Procedure di Restore
 
-Effettuare il restore di tutti i database MySQL
+Effettuare il restore di tutti i DB MySQL
 
 	mysql --all-databases -u root -pPASSWORD < DB-full-backup.sql
 
-Effettuare il restore di uno specifico database MySQL in un container Docker
+Effettuare il restore di uno specifico DB MySQL in un container Docker
 
-	docker exec [container_id] sh -c 'exec mysql --all-databases -uroot -pPASSWORD' < DB-full-backup.sql
+	docker exec <ContainerID> sh -c 'exec mysql --all-databases -uroot -pPASSWORD' < DB-full-backup.sql
 
 ## Comandi MySQL
 
-Visualizzare tutti i database
+Visualizzare tutti i DB
 
 	SHOW DATABASES;
 
-Creare un database
+Creare un DB
 
-	CREATE DATABASE [nome_database];
+	CREATE DATABASE <DBname>;
 
-Utilizzare un database
+Utilizzare un DB
 
-	USE [nome_database];
+	USE <DBname>;
   
 Creare una tabella
 
-	CREATE TABLE [nome_tabella] {
+	CREATE TABLE <TableName> {
 
-	column1 int(3) NOT NULL AUTO_INCREMENT,
+	<PRIMARYColumn> int(3) NOT NULL AUTO_INCREMENT,
 
-	column2 VARCHAR(255),
+	<Column2> VARCHAR(255),
 
-	column3 VARCHAR(255),
+	<Column3> VARCHAR(255),
 
-	PRIMARY KEY (column1)
+	PRIMARY KEY (<PRIMARYColumn>)
 
 	};
 
 Ottenere la descrizione della tabella
 
-	DESCRIBE TABLE [nome_tabella];
+	DESCRIBE TABLE <TableName>;
   
 Inserire i dati in una tabella (1 metodo)
 
-	INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+	INSERT INTO table_name (<Column1>, <Column2>, <Column3>) VALUES (<Value1>, <Value2>, <Value3>);
   
 Inserire i dati in una tabella (2 metodo)
 
-	INSERT INTO table SET column1=value1, column2=value2, column3=value3;
+	INSERT INTO table SET <Column1>=<Value1>, <Column2>=<Value2>, <Column3>=<Value3>;
   
 Mostrare il contenuto di una tabella
 
-	SELECT * FROM [nome_tabella];
+	SELECT * FROM <TableName>;
   
 SELECT con condizione WHERE
 
-	SELECT column1, column2 FROM [nome_tabella] WHERE column3 = [condizione];
+	SELECT <Column1>, <Column2> FROM <TableName> WHERE column3 = <Condizione>;
   
 Aggiornare i campi di una tabella
 
-	UPDATE [nome_tabella] SET column1 = [variabile] WHERE column3 = [condizione];
+	UPDATE <TableName> SET <Column1> = <Variable> WHERE <Column2> = <Condizione>;
   
 UPDATE di una colonna di una tabella (calcolata a partire dalle altre colonne se una condizione è soddisfatta)
 
-	UPDATE `DB`.`TABELLA` SET colonna1 = colonna2 - colonna3 WHERE colonna4 > [condizione];
+	UPDATE `DB`.`TABELLA` SET <Column1> = <Column2> - <Column3> WHERE <Column4> > <Condizione>;
   
-Cancellare un database
+Cancellare un DB
 
-	DROP DATABASE [nome_database];
+	DROP DATABASE <DBname>;
   
 Cancellare una tabella
 
-	DROP TABLE [nome_tabella];
+	DROP TABLE <TableName>;
   
 Tipi di chiavi
 
@@ -116,47 +116,47 @@ Tipi di chiavi
 
 	FOREIGN KEY
   
-Creare una tabella relazionale (in questo caso la tabella relazionale è nominata tabella_relazionale3)
+Creare una tabella relazionale (in questo caso la tabella relazionale è nominata <RelationalTable>)
 
-	CREATE TABLE tabella1 {
+	CREATE TABLE <Table1> {
 
-	T1colonna1 VARCHAR(255) NOT NULL,
+	<Table1Column1> VARCHAR(255) NOT NULL,
 
-	PRIMARY KEY (T1colonna1)
-
-	};
-
-	CREATE TABLE tabella2 {
-
-	T2colonna1 VARCHAR(255) NOT NULL,
-
-	PRIMARY KEY (T2colonna1)
+	PRIMARY KEY (<Table1Column1>)
 
 	};
 
-	CREATE TABLE tabella_relazionale3 {
+	CREATE TABLE <Table2> {
 
-	id int(4) AUTO_INCREMENT,
+	<Table2Column1> VARCHAR(255) NOT NULL,
 
-	T1colonna1 VARCHAR(255) NOT NULL,
+	PRIMARY KEY (<Table2Column1>)
 
-	T2colonna1 VARCHAR(255) NOT NULL,
+	};
 
-	PRIMARY KEY (id),
+	CREATE TABLE <RelationalTable> {
 
-	FOREIGN KEY (T1colonna1) REFERENCE tabella1 (T1colonna1),
+	ID int(4) AUTO_INCREMENT,
 
-	FOREIGN KEY (T2colonna1) REFERENCE tabella2 (T2colonna1),
+	<Table1Column1> VARCHAR(255) NOT NULL,
+
+	<Table2Column1> VARCHAR(255) NOT NULL,
+
+	PRIMARY KEY (<ID>),
+
+	FOREIGN KEY (<Table1Column1>) REFERENCE tabella1 (<Table1Column1>),
+
+	FOREIGN KEY (<Table2Column1>) REFERENCE tabella2 (<Table2Column1>),
 
 	};
   
 Queries con JOIN
 
-	SELECT * FROM tabella1
+	SELECT * FROM <Table1>
 
-	JOIN tabella_relazionale3 on tabella1.T1colonna1 = tabella_relazionale3.T1colonna1
+	JOIN <RelationalTable> on <Table1>.<Table1Column1> = <RelationalTable>.<Table1Column1>
 
-	WHERE tabella_relazionale3.T1colonna1 = <Condizione>;
+	WHERE <RelationalTable>.<Table1Column1> = <Condizione>;
   
 ## Creare procedure MySQL con phpMyAdmin
 
@@ -176,15 +176,15 @@ Imposta l’AUTO_INCREMENT della tabella = 1, poi esegui l’INSERT della differ
 
 	BEGIN
 
-	ALTER TABLE `Tabella2` AUTO_INCREMENT = 1;
+	ALTER TABLE <Table2> AUTO_INCREMENT = 1;
 
-	INSERT INTO `Database2`.`Tabella2` (`Colonna1`,`Colonna2`,`Colonna3`)
+	INSERT INTO <Database2>.<Table2> (<Column1>,<Column2>,<Column3>)
 
-	SELECT `Colonna1`,`Colonna2`,`Colonna3` FROM Tabella1
+	SELECT <Column1>,<Column2>,<Column3> FROM <Table1>
 
 	EXCEPT
 
-	SELECT `Colonna1`,`Colonna2`,`Colonna3` FROM Tabella2
+	SELECT <Column1>,<Column2>,<Column3> FROM <Table2>
 
 	END
 
@@ -198,4 +198,4 @@ CURRENT_DATE (2021-07-07) e NOW() (2021-07-07 08:53:26)
 
 SELECT colonna1, colonna2, count ALL dove la colonna1 corrisponde alla data di oggi
 
-	SELECT colonna1, colonna2 , count(*) FROM Tabella WHERE Colonna1 LIKE CURRENT_DATE GROUP BY colonna1, colonna2;
+	SELECT <Column1>, <Column2> , count(*) FROM <Table> WHERE <Column1> LIKE CURRENT_DATE GROUP BY <Column1>, <Column2>;
