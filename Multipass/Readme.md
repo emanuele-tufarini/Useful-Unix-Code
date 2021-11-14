@@ -20,9 +20,14 @@ Una volta installato multipass avviare a seconda dell'OS utilizzato:
 - il terminale di MacOS
 - la powershell di Windows
 
-Creare e lanciare una VM (basata sull'ultima versione di Ubuntu Server LTS)
+Mostrare tutte le versioni di Ubuntu disponibili
 
-	multipass launch --name <VMname>
+	multipass find
+
+
+Creare e lanciare una VM (se la versione viene omessa verrà utilizzata l'ultima versione di Ubuntu Server LTS)
+
+	multipass launch --name <VMname> <Version>
 
 Modificare le caratteristiche della VM
 
