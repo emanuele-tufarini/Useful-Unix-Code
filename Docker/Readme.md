@@ -2,11 +2,11 @@
 
 Copiare una cartella in remoto in una macchina locale
 
-	scp -r user@yourServerIp:/path/to/remote /home/to/local/
+	scp -r <User>@<ServerIP>:/path/to/remote /home/to/local/
 
 Copiare una cartella locale in una macchina remota
 
-	scp -r /path/to/local username@yourServerIp:/path/to/remote
+	scp -r /path/to/local <User>@<ServerIP>:/path/to/remote
 
 ## Installare docker su Ubuntu
 
@@ -34,11 +34,13 @@ Aggiungendo $USER al gruppo docker l'utente non dovrà inserire ogni volta il co
 
 	sudo gpasswd -a $USER docker
 
+	sudo gpasswd -a <User> docker
+
 ## Comandi utili per i container docker
 
 Installare un immagine da [Docker Hub](https://hub.docker.com/ "Docker Hub")
 
-	docker pull [IMAGE_NAME]
+	docker pull <ImageName>
 
 Elencare i processi docker-compose (nella cartella con il file compose)
 
@@ -62,77 +64,77 @@ Avviare un servizio docker compose senza sovrascriverlo se già avviato
 
 Fermare un container
 
-	docker stop [container-id]
+	docker stop <ContainerID>
 
 Eliminare un container
 
-	docker rm [container-id]
+	docker rm <ContainerID>
 
 Avviare un processo
 
-	docker start [container-id]
+	docker start <ContainerID>
 
 Riavviare un processo
 
-	docker restart [container-id]
+	docker restart <ContainerID>
 
 Creare un immagine docker (nella cartella con il Dockerfile)
 
-	docker build -t [image-name] .
+	docker build -t <ImageName> .
 
 Avviare il container accedendo alla shell (la seconda volta è necessario entrare con exec per non resettarlo)
 
-	docker run -ti --name [container-name] [image-id] /bin/bash
+	docker run -ti --name <ContainerName> [image-id] /bin/bash
 
 Entrare in un container docker accedendo alla shell (il container deve essere in up)
 
-	docker exec -ti --name [container-name] [container-id] /bin/bash
+	docker exec -ti --name <ContainerName> [container-id] /bin/bash
 
 Copiare un file in un container
 
-	docker cp myFile [container-id]:/work
+	docker cp myFile <ContainerID>:/work
 
 Copiare un file del container nella macchina host
 
-	docker cp [container-id]:/path/to/container/myFile /path/to/local
+	docker cp <ContainerID>:/path/to/container/myFile /path/to/local
 
 ## Comandi per il backup dei container Docker
 
 Salvare l'immagine del container docker
 
-	docker save [container-name] > [image-name].tar
+	docker save <ContainerName> > <ImageName>.tar
 
 Caricare l'immagine docker
 
-	docker load /path/to/[image-name].tar [image-name]
+	docker load /path/to/<ImageName>.tar <ImageName>
 
 Esportare il container docker in un file TAR
 
-	docker export [container-name] > [image-name].tar
+	docker export <ContainerName> > <ImageName>.tar
 
 Importare il container docker in un file TAR (precedentemente esportato)
 
-	docker import /path/to/[image-name].tar [image-name]
+	docker import /path/to/<ImageName>.tar <ImageName>
 
 ## Comandi per mostrare i log dei container docker
 
 Mostrare i log del container docker
 
-	docker logs [container-id]
+	docker logs <ContainerID>
 
 Mostrare i primi log del container docker
 
-	docker logs [container-id] | head
+	docker logs <ContainerID> | head
 
 Mostrare gli ultimi log del container docker
 
-	docker logs [container-id] | tail
+	docker logs <ContainerID> | tail
 
 
 ## Ricreare un servizio docker compose
 
-	docker-compose up --build --force-recreate --no-deps -d [service_name]
+	docker-compose up --build --force-recreate --no-deps -d <ServiceName>
 
 ## Eseguire un backup completo del database mysql dentro a un container docker
 
-	docker exec [container-id] sh -c 'exec mysqldump --all-databases -uroot -pPASSWORD' >  /HostPath/DATABASE_FULL_backup_$(date +"%d%m%Y_%H%M").sql
+	docker exec <ContainerID> sh -c 'exec mysqldump --all-databases -uroot -pPASSWORD' >  /HostPath/DATABASE_FULL_backup_$(date +"%d%m%Y_%H%M").sql
