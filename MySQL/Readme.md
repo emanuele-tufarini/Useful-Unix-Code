@@ -40,6 +40,10 @@ Effettuare il restore di tutti i DB MySQL
 
 	mysql --all-databases -u root -pPASSWORD < DB-full-backup.sql
 
+Effettuare il restore delle tabelle con MySQL
+
+	mysqldump -u -p <DBname> <TableName> < <BackupName>.sql
+
 Effettuare il restore di uno specifico DB MySQL in un container Docker
 
 	docker exec <ContainerID> sh -c 'exec mysql --all-databases -uroot -pPASSWORD' < DB-full-backup.sql
