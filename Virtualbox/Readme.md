@@ -122,7 +122,7 @@ Importare una VM formato OVA
 
 Aggiungere regole di port forwarding
 
-	vboxmanage modifyvm <VMname> --natpf1 "ssh,tcp,,11000,,22"
+	vboxmanage modifyvm <VMname> --natpf1 "ssh,tcp,,<HostPort Number>,,<VMport Number>"
 
 Mostrare le regole di port forwarding della VM
 
@@ -136,7 +136,7 @@ Per effettuare uno streaming di Virtualbox devo installare Remmina (protocollo R
 
 	vboxmanage modifyvm <VMname> --vrde on
 
-	vboxmanage modifyvm <VMname> --vrdemulticon on --vrdeport 10001
+	vboxmanage modifyvm <VMname> --vrdemulticon on --vrdeport <VRDEport Number>
 
 ## Controllare la macchina virtuale (pause, resume, reset, poweroff e savestate)
 
@@ -174,7 +174,7 @@ Cambiare la ram della VM
 
 Cambiare il numero dei core della CPU della VM
 
-	vboxmanage modifyvm <name or UUID> --cpus <number>
+	vboxmanage modifyvm <name or UUID> --cpus <CoreNumber>
 
 ## Disconnettere e riconnettere la rete ethernet
 
