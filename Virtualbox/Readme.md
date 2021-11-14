@@ -30,7 +30,7 @@ Opzioni di networking --nic<1-N> none | null | nat | natnetwork | bridged | intn
 
 	vboxmanage modifyvm <VMname> --nic1 nat
 
-Crea il disco rigido su cui verrà installata la macchina virtuale
+Creare il disco rigido su cui verrà installata la macchina virtuale
 
 	vboxmanage createhd --filename $PWD/<VMname>/<VMname>_DISK.vdi --size 80000 --format VDI
 
