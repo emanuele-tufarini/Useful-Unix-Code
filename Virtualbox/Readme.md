@@ -1,3 +1,15 @@
+## Disattivare HiperV su Windows 11
+
+Virtualbox non funziona su Windows 11 se HyperV è abilitato
+
+Disattivare HyperV
+
+bcdedit /set hypervisorlaunchtype off
+
+Attivare HyperV
+
+bcdedit /set hypervisorlaunchtype on
+
 ## Creare una VM (headless)
 
 Visualizzare gli ostype (i sistemi operativi che [Virtualbox](https://www.virtualbox.org/wiki/Downloads "Virtualbox") è in grado di emulare)
