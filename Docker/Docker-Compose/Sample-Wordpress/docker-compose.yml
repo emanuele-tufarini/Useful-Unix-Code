@@ -15,6 +15,7 @@ services:
       MYSQL_PASSWORD: wordpress
     networks:
       - wordpress
+      
   phpmyadmin:
     container_name: wordpress-phpmyadmin
     depends_on:
@@ -27,6 +28,7 @@ services:
       PMA_HOST: db
     networks:
       - wordpress
+      
   wordpress:
     container_name: wordpress-website
     depends_on:
