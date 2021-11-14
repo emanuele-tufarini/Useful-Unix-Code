@@ -32,7 +32,7 @@ Opzioni di networking --nic<1-N> none | null | nat | natnetwork | bridged | intn
 
 Creare il disco rigido su cui verrà installata la macchina virtuale
 
-	vboxmanage createhd --filename $PWD/<VMname>/<VMname>_DISK.vdi --size 80000 --format VDI
+	vboxmanage createhd --filename $PWD/<VMname>/<VMname>_DISK.vdi --size <Size in MB> --format VDI
 
 Collega il controller SATA alla macchina virtuale
 
