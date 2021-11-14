@@ -170,7 +170,9 @@ Queries con JOIN
 
 - Aggiungi una routine
 
-- (Parametri: Elimina, tipo di accesso dati SQL: CONTAINS SQL) Inserire il nome della routine e inserire il codice SQL in Definizione.
+- Impostare i parametri: Elimina, tipo di accesso dati SQL: CONTAINS SQL
+
+- Inserire il nome della routine e inserire il codice SQL in Definizione
 
 La procedura deve essere inclusa tra BEGIN e END.
   
@@ -202,4 +204,4 @@ CURRENT_DATE (2021-07-07) e NOW() (2021-07-07 08:53:26)
 
 SELECT colonna1, colonna2, count ALL dove la colonna1 corrisponde alla data di oggi
 
-	SELECT <Column1>, <Column2> , count(*) FROM <Table> WHERE <Column1> LIKE CURRENT_DATE GROUP BY <Column1>, <Column2>;
+	SELECT <Column1>, <Column2>, count(*) FROM <Table> WHERE <Column1> LIKE CURRENT_DATE GROUP BY <Column1>, <Column2>;
