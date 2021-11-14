@@ -1,0 +1,11 @@
+# Sample of MySQL Dockerfile
+FROM mysql
+ENV MYSQL_DATABASE MIQUALAT
+# la cartella <SqlScript> deve contenere gli script sql
+COPY ./<SqlScript>/ /docker-entrypoint-initdb.d/
+
+# docker build -t miqualat-mysql-image . 
+# docker run -d -p <HostPort ex 3306>:3306 --name <ContainerName> -e MYSQL_ROOT_PASSWORD=<Password <ImageName>
+# docker exec -it <ContainerName> bash 
+# mysql -u root -p # password : miqualat2020
+# docker run --name miqualat-phpmyadmin-container -d --link miqualat-mysql-container:db -p <HostPort ex 8080>:80 phpmyadmin
