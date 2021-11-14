@@ -4,11 +4,11 @@ Virtualbox non funziona su Windows 11 se HyperV è abilitato
 
 Disattivare HyperV
 
-bcdedit /set hypervisorlaunchtype off
+	bcdedit /set hypervisorlaunchtype off
 
 Attivare HyperV
 
-bcdedit /set hypervisorlaunchtype on
+	bcdedit /set hypervisorlaunchtype on
 
 ## Creare una VM (headless)
 
