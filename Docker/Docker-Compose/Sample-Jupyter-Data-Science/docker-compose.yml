@@ -1,4 +1,4 @@
-# Creare la cartella <jupyter-notebook> (conterra' tutti i file del notebook)
+# Creare la cartella <jupyter-notebook> (che conterrà tutti i file del notebook)
 
 version:                "3"
 services:
