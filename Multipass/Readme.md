@@ -42,6 +42,10 @@ Uscire dalla VM
 
 ## Aggiornare la VM
 
+Impostare la password dell'utente ubuntu
+
+	sudo passwd ubuntu
+
 Aggiornare la VM
 
 	sudo apt update && sudo apt upgrade
