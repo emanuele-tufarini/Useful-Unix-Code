@@ -54,4 +54,4 @@ Rimuovere tutti i file infetti presenti in una cartella
 
 Mostrare tutte le opzioni (help)
 
-	clamscan –help
+	clamscan –-help
