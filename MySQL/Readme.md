@@ -62,7 +62,7 @@ Utilizzare un DB
 
 	USE <DBname>;
   
-Creare una tabella (prima colonna PRIMARY_KEY AUTO_INCREMENT)
+Creare una tabella (prima colonna PRIMARY KEY AUTO_INCREMENT)
 
 	CREATE TABLE <TableName> {
 
@@ -94,15 +94,15 @@ Mostrare il contenuto di una tabella
   
 SELECT con condizione WHERE
 
-	SELECT <Column1>, <Column2> FROM <TableName> WHERE column3 = <Condizione>;
+	SELECT <Column1>, <Column2> FROM <TableName> WHERE column3 = <Condition>;
   
 Aggiornare i campi di una tabella
 
-	UPDATE <TableName> SET <Column1> = <Variable> WHERE <Column2> = <Condizione>;
+	UPDATE <TableName> SET <Column1> = <Variable> WHERE <Column2> = <Condition>;
   
 UPDATE di una colonna di una tabella (calcolata a partire dalle altre colonne se una condizione è soddisfatta)
 
-	UPDATE `DB`.`TABELLA` SET <Column1> = <Column2> - <Column3> WHERE <Column4> > <Condizione>;
+	UPDATE `DB`.`TABELLA` SET <Column1> = <Column2> - <Column3> WHERE <Column4> > <Condition>;
   
 Cancellare un DB
 
@@ -160,7 +160,7 @@ Queries con JOIN
 
 	JOIN <RelationalTable> on <Table1>.<Table1Column1> = <RelationalTable>.<Table1Column1>
 
-	WHERE <RelationalTable>.<Table1Column1> = <Condizione>;
+	WHERE <RelationalTable>.<Table1Column1> = <Condition>;
   
 ## Creare procedure MySQL con phpMyAdmin
 
