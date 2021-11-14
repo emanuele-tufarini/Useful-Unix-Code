@@ -6,7 +6,7 @@ ENV MYSQL_DATABASE <DBname>
 COPY ./<SqlScript>/ /docker-entrypoint-initdb.d/
 
 # COMANDI PER AVVIARE IL CONTAINER UTILIZZARLO E COLLEGARLO A PHPMYADMIN
-# docker build -t miqualat-mysql-image . 
+# docker build -t <ImageName> . 
 # docker run -d -p <HostPort ex 3306>:3306 --name <ContainerName> -e MYSQL_ROOT_PASSWORD=<Password <ImageName>
 # docker exec -it <ContainerName> bash 
 # mysql -u root -p # password : miqualat2020
