@@ -12,11 +12,11 @@ Eseguire il login con MySQL specificando host e password
 
 Effettuare il backup di un DB specifico con MySQL
 
-	mysqldump -u root -p <DBname> > DB-backup.sql
+	mysqldump -u <User> -p <DBname> > DB-backup.sql
  
 Effettuare il backup delle tabelle con MySQL
 
-	mysqldump -u root -p <DBname> <Table1> <Table2> > <BackupName>.sql
+	mysqldump -u <User> -p <DBname> <Table1> <Table2> > <BackupName>.sql
   
 Effettuare il backup compresso (GZ) di un DB specifico con MySQL
 
@@ -46,7 +46,7 @@ Effettuare il restore delle tabelle con MySQL
 
 Effettuare il restore di uno specifico DB MySQL in un container Docker
 
-	docker exec <ContainerID> sh -c 'exec mysql --all-databases -uroot -pPASSWORD' < DB-full-backup.sql
+	docker exec <ContainerID> sh -c 'exec mysql --all-databases -u<User> -pPASSWORD' < DB-full-backup.sql
 
 ## Comandi MySQL
 
