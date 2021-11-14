@@ -112,11 +112,11 @@ Ripristinare uno snapshot
 
 Esportare una VM formato OVA
 
-	vboxmanage export <name or UUID>  -o image.ova
+	vboxmanage export <name or UUID>  -o <ImageName>.ova
 
 Importare una VM formato OVA
 
-	vboxmanage import image.ova
+	vboxmanage import <ImageName>.ova
 
 ## Definire le regole di port forwarding
 
