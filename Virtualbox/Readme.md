@@ -58,7 +58,7 @@ Impostare l'accesso RDP e avviare la VM
 
 	vboxmanage modifyvm <VMname> --vrde on
 
-	vboxmanage modifyvm <VMname> --vrdemulticon on --vrdeport 10001
+	vboxmanage modifyvm <VMname> --vrdemulticon on --vrdeport <VRDEport Number ex 10001>
 
 	vboxheadless --startvm <VMname>
 
@@ -122,7 +122,7 @@ Importare una VM formato OVA
 
 Aggiungere regole di port forwarding
 
-	vboxmanage modifyvm <VMname> --natpf1 "ssh,tcp,,<HostPort Number>,,<VMport Number>"
+	vboxmanage modifyvm <VMname> --natpf1 "ssh,tcp,,<HostPort Number ex 11000>,,<VMport Number 22>"
 
 Mostrare le regole di port forwarding della VM
 
@@ -136,7 +136,7 @@ Per effettuare uno streaming di Virtualbox devo installare Remmina (protocollo R
 
 	vboxmanage modifyvm <VMname> --vrde on
 
-	vboxmanage modifyvm <VMname> --vrdemulticon on --vrdeport <VRDEport Number>
+	vboxmanage modifyvm <VMname> --vrdemulticon on --vrdeport <VRDEport Number ex 10001>
 
 ## Controllare la macchina virtuale (pause, resume, reset, poweroff e savestate)
 
