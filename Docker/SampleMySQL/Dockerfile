@@ -1,6 +1,6 @@
 # Sample of MySQL Dockerfile
 FROM mysql
-ENV MYSQL_DATABASE MIQUALAT
+ENV MYSQL_DATABASE <DBname>
 # Creare una cartella <SqlScript> nella stessa directory del Dockerfile
 # La cartella <SqlScript> deve contenere gli script sql
 COPY ./<SqlScript>/ /docker-entrypoint-initdb.d/
