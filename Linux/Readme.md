@@ -20,7 +20,7 @@ Copiare una cartella locale in una macchina remota
 
 ## Impostare i permessi
 
-chmod <a, u, g, o> <+, -> <r, w, x> <File>
+	chmod <a, u, g, o> <+, -> <r, w, x> <File>
 
 a = all
 u = you have to add <User>
