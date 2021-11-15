@@ -1,14 +1,14 @@
-## Attivare HiperV su Windows 11
+## Disattivare HiperV su Windows 11
 
-Se avete installato Virtualbox e disabilitato HyperV dovete riattivarlo
+Virtualbox non funziona su Windows 11 se HyperV è abilitato
 
-Attivare HyperV
-
-	bcdedit /set hypervisorlaunchtype on
-	
 Disattivare HyperV
 
 	bcdedit /set hypervisorlaunchtype off
+
+Attivare HyperV
+
+	bcdedit /set hypervisorlaunchtype auto
 
 ## Installare Multipass
 Installare [multipass](http://romanysoft.ghttps://multipass.run/ithub.io/MarkdownD/ "Multipass") per creare VM istantanee (disponibile per Linux, MacOS e Windows) tramite il file di installazione fornito sul sito.
