@@ -10,6 +10,10 @@ Attivare HyperV
 
 	bcdedit /set hypervisorlaunchtype auto
 
+Se il computer monta la versione di Windows Home installare [Virtualbox](https://www.virtualbox.org/wiki/Downloads "Virtualbox") ed abilitare i driver di Multipass su Virtualbox
+
+	multipass set local.driver=virtualbox
+
 ## Installare Multipass
 Installare [multipass](http://romanysoft.ghttps://multipass.run/ithub.io/MarkdownD/ "Multipass") per creare VM istantanee (disponibile per Linux, MacOS e Windows) tramite il file di installazione fornito sul sito.
 In alternativa si può utilizzare VirtualBox, un container Docker o altre tipologie di virtualizzazione o containerizzazione.
