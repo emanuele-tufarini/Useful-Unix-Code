@@ -96,7 +96,7 @@ Scaricare un file con wget
 
 	wget <myURL> -o <myFile>
 
-## Lavorare con i file
+## Manipolare i file
 
 
 Creare un file vuoto
