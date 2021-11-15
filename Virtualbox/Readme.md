@@ -8,7 +8,7 @@ Disattivare HyperV
 
 Attivare HyperV
 
-	bcdedit /set hypervisorlaunchtype on
+	bcdedit /set hypervisorlaunchtype auto
 
 ## Creare una VM (headless)
 
