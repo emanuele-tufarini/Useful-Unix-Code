@@ -1,5 +1,9 @@
 ## Utilizzare il comando SSH
 
+Mostrare l’hostname
+
+	hostname -I
+
 Connettersi ad un server con il protocollo SSH
 
 	ssh <User>@<ServerIP>
@@ -71,3 +75,126 @@ Rimuovere tutti i file infetti presenti in una cartella
 Mostrare tutte le opzioni (help)
 
 	clamscan –-help
+
+## Lavorare con gli utenti
+
+Mostrare quale utente sono
+	
+	whoami
+
+Cambiare User
+	
+	su <User>
+
+## Lavorare con i file
+
+Mostrare il contenuto della directory
+
+	ls
+	ls -lsh
+
+Mostrare il percorso della directory in cui mi trovo
+
+	pwd
+
+Creare un file vuoto
+
+	touch <myFile>
+
+Spostarsi in un'altra cartella
+
+	cd </path/to/folder>
+
+Creare una cartella
+	
+	mkdir <myFolder>
+	
+Cancellare <myFile>
+
+	rm <myFile>
+	
+Rimuovere una cartella
+	
+	rm -r <myFolder>
+	
+Rinominare un file o una cartella
+	
+	mv <Name> <newName>
+	
+Spostare un file o una cartella
+	
+	mv <path> <newPath>
+
+Stampa il contenuto di <myFile>
+
+	cat <myFile>
+
+Cerca una determinata parola in <myFile>
+
+	cat <myFile> | grep <String>
+
+Esegui la differenza di <myFile1> e <myFile2> inserisci la differenza in <myFile3>
+
+	grep -v -Ff <myFile1> <myFile2>.txt > <myFile3>
+
+Ordina le righe di un file
+
+	sort <myFile1>
+
+Scaricare un file con wget
+
+	wget <myURL>
+
+	wget <myURL> -o <myFile>
+	
+## Lavorare con i dischi
+
+Mostrare i dischi
+
+	df
+
+Mostrare i dischi (for human)
+
+	df -h
+
+Montare o rimuovere un disco (in una cartella
+
+	mount /DiskName /Folder
+
+	umount /DiskName
+	
+## Eseguire un file SH o Python
+	
+	./<myFile.sh>
+	
+	python <myFile.py>
+	
+	python3 <myFile.py>
+	
+## Aggiungere una schedule (attività) nel Crontab
+
+	crontab -e
+
+	# min(0-59) h(0-23) d(1-31) m(1-12) d(0-7)
+	
+	* * * * * /path/<Command>
+	
+	* * * * * /path/<myFile.sh>
+
+## Mostrare la data
+
+	date
+
+	date +"%d-%m-%Y"
+	
+Mostrare la cronologia
+
+	history
+
+Cancellare la cronologia
+
+	history -c
+
+Scrivere la cronologia
+
+	history -w
