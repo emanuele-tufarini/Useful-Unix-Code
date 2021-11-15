@@ -1,6 +1,6 @@
 ## Disattivare HiperV su Windows 11
 
-Virtualbox non funziona su Windows 11 se HyperV è abilitato
+Virtualbox potrebbe non funzionare su Windows 11 se HyperV è abilitato (Multipass richiede HyperV attivato per funzionare)
 
 Disattivare HyperV
 
