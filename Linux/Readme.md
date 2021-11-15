@@ -1,9 +1,5 @@
 ## Utilizzare il comando SSH
 
-Mostrare l’hostname
-
-	hostname -I
-
 Connettersi ad un server con il protocollo SSH
 
 	ssh <User>@<ServerIP>
@@ -76,8 +72,12 @@ Mostrare tutte le opzioni (help)
 
 	clamscan –-help
 
-## Lavorare con gli utenti
+## Lavorare con gli utenti e mostrare l'hostname
 
+Mostrare l’hostname
+
+	hostname -I
+	
 Mostrare quale utente sono
 	
 	whoami
@@ -187,6 +187,8 @@ Montare o rimuovere un disco (in una cartella
 
 	date +"%d-%m-%Y"
 	
+## Lavorare con la cronologia
+
 Mostrare la cronologia
 
 	history
