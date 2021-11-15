@@ -18,6 +18,22 @@ Copiare una cartella locale in una macchina remota
 
 	scp -r /path/to/local <User>@<ServerIP>:/path/to/remote
 
+## Impostare i permessi
+
+chmod <a, u, g, o> <+, -> <r, w, x> <File>
+
+a = all
+u = you have to add <User>
+g = you have to add <Group>
+o = other
+
++ = add permission
+- = remove permission
+
+r = read
+w = write
+x = execute
+	
 ## Antivirus ClamAV
 
 Installare ClamAV
