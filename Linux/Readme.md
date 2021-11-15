@@ -86,22 +86,19 @@ Cambiare User
 	
 	su <User>
 
-## Lavorare con i file
+## Lavorare con i file e le cartelle
 
 Mostrare il contenuto della directory
 
 	ls
+	
 	ls -lsh
 
 Mostrare il percorso della directory in cui mi trovo
 
 	pwd
 
-Creare un file vuoto
-
-	touch <myFile>
-
-Spostarsi in un'altra cartella
+Cambiare cartella
 
 	cd </path/to/folder>
 
@@ -109,14 +106,12 @@ Creare una cartella
 	
 	mkdir <myFolder>
 	
-Cancellare <myFile>
-
-	rm <myFile>
-	
 Rimuovere una cartella
 	
 	rm -r <myFolder>
 	
+	rmdir <myFolder>
+
 Rinominare un file o una cartella
 	
 	mv <Name> <newName>
@@ -125,19 +120,11 @@ Spostare un file o una cartella
 	
 	mv <path> <newPath>
 
-Stampa il contenuto di <myFile>
+Stampare il contenuto di <myFile>
 
 	cat <myFile>
 
-Cerca una determinata parola in <myFile>
-
-	cat <myFile> | grep <String>
-
-Esegui la differenza di <myFile1> e <myFile2> inserisci la differenza in <myFile3>
-
-	grep -v -Ff <myFile1> <myFile2>.txt > <myFile3>
-
-Ordina le righe di un file
+Ordinare le righe di un file
 
 	sort <myFile1>
 
@@ -146,6 +133,25 @@ Scaricare un file con wget
 	wget <myURL>
 
 	wget <myURL> -o <myFile>
+
+## Lavorare con i file
+
+
+Creare un file vuoto
+
+	touch <myFile>
+
+Cancellare un file
+
+	rm <myFile>
+	
+Cerca una determinata parola in <myFile>
+
+	cat <myFile> | grep <String>
+
+Esegui la differenza di <myFile1> e <myFile2> inserisci la differenza in <myFile3>
+
+	grep -v -Ff <myFile1> <myFile2>.txt > <myFile3>
 	
 ## Lavorare con i dischi
 
