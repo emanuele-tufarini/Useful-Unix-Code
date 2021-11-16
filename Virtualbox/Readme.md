@@ -88,6 +88,12 @@ Mostrare tutte le VM avviate
 
 	sudo vboxmanage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-XXX.vbox-extpack
 
+## Conferire permessi cartella condivisa Virtualbox
+
+Digitare il comando nella Shell della VM
+
+	sudo adduser $USER vboxsf
+
 ## Eseguire backup e snapshot della VM
 
 Clonare una VM
