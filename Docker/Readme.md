@@ -130,7 +130,6 @@ Mostrare gli ultimi log del container docker
 
 	docker logs <ContainerID> | tail
 
-
 ## Ricreare un servizio docker compose
 
 	docker-compose up --build --force-recreate --no-deps -d <ServiceName>
@@ -138,3 +137,22 @@ Mostrare gli ultimi log del container docker
 ## Eseguire un backup completo del database mysql dentro a un container docker
 
 	docker exec <ContainerID> sh -c 'exec mysqldump --all-databases -uroot -pPASSWORD' >  /HostPath/DATABASE_FULL_backup_$(date +"%d%m%Y_%H%M").sql
+	
+## Collegare due container docker (es Spark e MySQL) tramite la network
+
+Mostrare tutte le network
+
+	docker network ls
+
+Identificare la network in cui risiede il container
+
+	docker container inspect mariadb-service
+
+Il nome della network è riportato sotto "Networks"
+
+            "Networks": {
+                "servicescompose_default": {
+	
+Collegare due container docker (es Spark e MySQL) tramite la network
+	
+	docker run --name <containerName> --net <networkName> <containerImage>
