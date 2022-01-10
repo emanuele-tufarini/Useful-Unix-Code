@@ -89,6 +89,10 @@ Avviare il container accedendo alla shell (la seconda volta è necessario entrar
 Entrare in un container docker accedendo alla shell (il container deve essere in up)
 
 	docker exec -ti --name <ContainerName> [container-id] /bin/bash
+	
+Entrare in un container docker accedendo alla shell (il container deve essere in up) come root
+
+docker exec -it -u root <containerName> bash
 
 Copiare un file in un container
 
