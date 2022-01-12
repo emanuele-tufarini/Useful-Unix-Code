@@ -1,3 +1,14 @@
+- [Utilizzare il comando SCP](#utilizzare-il-comando-scp)
+- [Installare docker su Ubuntu](#installare-docker-su-ubuntu)
+- [Installare docker su Fedora](#installare-docker-su-fedora)
+- [Aggiungere $USER al gruppo docker](#aggiungere--user-al-gruppo-docker)
+- [Comandi utili per i container docker](#comandi-utili-per-i-container-docker)
+- [Comandi per il backup dei container Docker](#comandi-per-il-backup-dei-container-docker)
+- [Comandi per mostrare i log dei container docker](#comandi-per-mostrare-i-log-dei-container-docker)
+- [Ricreare un servizio docker compose](#ricreare-un-servizio-docker-compose)
+- [Eseguire un backup completo del database mysql dentro a un container docker](#eseguire-un-backup-completo-del-database-mysql-dentro-a-un-container-docker)
+- [Collegare due container docker (es Spark e MySQL) tramite la network e montare una cartella](#collegare-due-container-docker--es-spark-e-mysql--tramite-la-network-e-montare-una-cartella)
+
 ## Utilizzare il comando SCP
 
 Copiare una cartella in remoto in una macchina locale
