@@ -1,3 +1,9 @@
+- [Connettersi al DB con MySQL](#connettersi-al-db-con-mysql)
+- [Procedure di backup](#procedure-di-backup)
+- [Procedure di Restore](#procedure-di-restore)
+- [Comandi MySQL](#comandi-mysql)
+- [Creare procedure MySQL con phpMyAdmin](#creare-procedure-mysql-con-phpmyadmin)
+
 ## Connettersi al DB con MySQL
 
 Eseguire il login con MySQL
