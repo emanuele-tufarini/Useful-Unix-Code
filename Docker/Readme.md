@@ -163,4 +163,4 @@ Collegare due container docker (es Spark e MySQL) tramite la network
 
 Collegare due container docker (es Spark e MySQL) tramite la network e montare una cartella (eseguire il comando nella cartella da montare)
 	
-docker run --name <containerName> --volume $PWD/:/opt/bitnami/spark/work --net <networkName> bitnami/spark
+	docker run --name <containerName> --volume $PWD/:/opt/bitnami/spark/work --net <networkName> bitnami/spark
