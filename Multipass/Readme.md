@@ -1,3 +1,9 @@
+- [Disattivare HiperV su Windows 11](#disattivare-hiperv-su-windows-11)
+- [Installare Multipass](#installare-multipass)
+- [Creare una VM con multipass per utilizzare i software Linux](#creare-una-vm-con-multipass-per-utilizzare-i-software-linux)
+- [Aggiornare la VM](#aggiornare-la-vm)
+- [Rimuovere la VM](#rimuovere-la-vm)
+
 ## Disattivare HiperV su Windows 11
 
 Virtualbox potrebbe non funzionare su Windows 11 se HyperV è abilitato (Multipass richiede HyperV attivato per funzionare)
