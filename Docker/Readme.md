@@ -142,22 +142,22 @@ Mostrare gli ultimi log del container docker
 
 	docker exec <ContainerID> sh -c 'exec mysqldump --all-databases -uroot -pPASSWORD' >  /HostPath/DATABASE_FULL_backup_$(date +"%d%m%Y_%H%M").sql
 	
-## Collegare due container docker (es Spark e MySQL) tramite la network
+## Collegare due container docker (es Spark e MySQL) tramite la network e montare una cartella
 
-Mostrare tutte le network
+Mostrare tutte le network presenti in docker
 
 	docker network ls
 
-Identificare la network in cui risiede il container
+Identificare la network in cui risiede il container SQL
 
-	docker container inspect mariadb-service
+	docker container inspect <containerName>
 
 Il nome della network è riportato sotto "Networks"
 
             "Networks": {
                 "<networkName>": {
 	
-Collegare due container docker (es Spark e MySQL) tramite la network e montare una cartella
+Collegare due container docker (es Spark e MySQL) tramite la network
 	
 	docker run --name <containerName> --net <networkName> <containerImage>
 
