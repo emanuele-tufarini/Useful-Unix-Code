@@ -1,3 +1,15 @@
+- [Disattivare HiperV su Windows 11](#disattivare-hiperv-su-windows-11)
+- [Creare una VM (headless)](#creare-una-vm--headless-)
+- [Avviare una VM](#avviare-una-vm)
+- [Installare le extension pack](#installare-le-extension-pack)
+- [Conferire permessi cartella condivisa Virtualbox](#conferire-permessi-cartella-condivisa-virtualbox)
+- [Eseguire backup e snapshot della VM](#eseguire-backup-e-snapshot-della-vm)
+- [Definire le regole di port forwarding](#definire-le-regole-di-port-forwarding)
+- [Abilitare protocollo RDP (screen streaming per server headless)](#abilitare-protocollo-rdp--screen-streaming-per-server-headless-)
+- [Controllare la macchina virtuale (pause, resume, reset, poweroff e savestate)](#controllare-la-macchina-virtuale--pause--resume--reset--poweroff-e-savestate-)
+- [Cambiare le caratteristiche della VM](#cambiare-le-caratteristiche-della-vm)
+- [Disconnettere e riconnettere la rete ethernet](#disconnettere-e-riconnettere-la-rete-ethernet)
+
 ## Disattivare HiperV su Windows 11
 
 Virtualbox non funziona su Windows 11 se HyperV è abilitato
