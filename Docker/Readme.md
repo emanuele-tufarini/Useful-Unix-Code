@@ -157,7 +157,7 @@ Il nome della network è riportato sotto "Networks"
             "Networks": {
                 "<networkName>": {
 	
-Collegare due container docker (es Spark e MySQL) tramite la network
+Collegare due container docker (es Spark e MySQL) tramite la network e montare una cartella
 	
 	docker run --name <containerName> --net <networkName> <containerImage>
 
