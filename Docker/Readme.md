@@ -155,8 +155,12 @@ Identificare la network in cui risiede il container
 Il nome della network è riportato sotto "Networks"
 
             "Networks": {
-                "servicescompose_default": {
+                "<networkName>": {
 	
 Collegare due container docker (es Spark e MySQL) tramite la network
 	
 	docker run --name <containerName> --net <networkName> <containerImage>
+
+Collegare due container docker (es Spark e MySQL) tramite la network e montare una cartella (eseguire il comando nella cartella da montare)
+	
+docker run --name <containerName> --volume $PWD/:/opt/bitnami/spark/work --net <networkName> bitnami/spark
