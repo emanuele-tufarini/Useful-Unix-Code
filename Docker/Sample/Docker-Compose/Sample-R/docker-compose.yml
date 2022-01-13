@@ -1,0 +1,13 @@
+# Creare la cartella <rfolder> (che conterrà tutti i file di R)
+
+version: '3'
+
+services:
+
+  <rbase-ServiceName>:
+    image: r-base
+    volumes:
+     - ./rfolder/:/home
+    container_name: <rbase-ServiceName>
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t

@@ -1,0 +1,16 @@
+# Creare la cartella <website> (che conterrà tutti i file del sito internet)
+
+version: '3'
+
+services:
+
+  <nginx-ServiceName>:
+    image: nginx
+    volumes:
+     - ./website:/usr/share/nginx/html/
+    ports:
+     - "8000:80"
+    container_name: <nginx-ServiceName>
+    environment:
+     - NGINX_HOST=foobar.com
+     - NGINX_PORT=80

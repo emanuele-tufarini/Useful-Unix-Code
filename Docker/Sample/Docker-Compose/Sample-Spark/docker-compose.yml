@@ -1,0 +1,19 @@
+# Creare la cartella <sparkfolder> (che conterrà tutti i file di spark)
+
+version: '3'
+
+services:
+
+  <pyspark_notebook-ServiceName>:
+    image: jupyter/pyspark-notebook
+    volumes:
+     - ./sparkfolder/:/home/jovyan/work
+    ports:
+     - <port>:8888
+    container_name: <pyspark_notebook-ServiceName>
+
+  <spark-serviceName>:
+    image: bitnami/spark
+    volumes:
+     - ./sparkfolder/:/opt/bitnami/spark/work
+    container_name: <spark-serviceName>
